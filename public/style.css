@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  h1 {
+    text-align: center;
+    color: #e74b3c;
+    background: #2c3e50;
+    padding: 20px;
+    font-size: 1.8rem;
+  }
+
+  .banner {
+    background: #667eea;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      padding: 20px;
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    label {
+      font-weight: bold;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .btn {
+        background: white;
+        color: #4f46e5;
+        border: 2px solid #4f46e5;
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 0.3rem;
+      }
+
+      .btn.selected {
+        background: #4f46e5;
+        color: white;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    }
+
+    .range-group {
+      align-items: center;
+    }
+
+    input[type="text"] {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 200px;
+    }
+
+    .range-value {
+      color: #ef4444;
+      font-weight: bold;
+    }
+  }
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    padding: 30px;
+  }
+
+  .subtitle {
+    margin: 0.5rem 0 2rem;
+    color: #4b5563;
+    padding: 20px;
+  }
+
+  .food-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .food-card {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 250px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      text-align: left;
+
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .prix-plat {
+        color: #ef4444;
+        font-size: large;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #4f46e5;
+        color: white;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+      }
+
+      .chef {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: black;
+      }
+    }
+  }
+}
+
+/* 2c3e50
+667eea
+e74b3c -> rouge */
