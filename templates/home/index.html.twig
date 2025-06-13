@@ -57,10 +57,12 @@
     <script> let dishesData = [];</script>
     {% for dishe in dishes %}
         <script> dishesData.push({
-            id: {{dishe.id}}, name:"{{dishe.name}}", price:"{{dishe.company}}", category:"{{dishe.category}}",
+            id: {{dishe.id}}, name:"{{dishe.name}}", price:"{{dishe.price}}", category:"{{dishe.category}}",
             createdAt:"{{ dishe.createdAt|date("d/m/Y", "Europe/Paris") }}", updatedAt:"{{ dishe.updatedAt|date("d/m/Y", "Europe/Paris") }}"
         });
         </script>
     {% endfor %}
     <script src="{{ asset('script.js') }}"></script>
 {% endblock %}
+
+const jobOffersData = JSON.parse('{{ jsonJobs|raw }}');

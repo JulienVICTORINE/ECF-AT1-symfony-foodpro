@@ -41,6 +41,27 @@ public function load(ObjectManager $manager): void
         $chef2->setCreatedAt(new \DateTimeImmutable("now"));
         $manager->persist($chef2);
 
+        // // Pour les repas
+        // $dishes = [
+        //     // Entrées
+        //     ['name' => 'Salade César', 'price' => 12.0, 'category' => 'Entrées', 'owner' => $chef1],
+        //     ['name' => 'Soupe de potiron', 'price' => 8.0, 'category' => 'Entrées', 'owner' => $chef2],
+        //     ['name' => 'Carpaccio de boeuf', 'price' => 16.0, 'category' => 'Entrées', 'owner' => $chef1],
+        //     ['name' => 'Bruschetta', 'price' => 10.0, 'category' => 'Entrées', 'owner' => $chef2],
+
+        //     // Plats
+        //     ['name' => 'Boeuf bourguignon', 'price' => 24.0, 'category' => 'Plats', 'owner' => $chef1],
+        //     ['name' => 'Saumon grillé', 'price' => 22.0, 'category' => 'Plats', 'owner' => $chef2],
+        //     ['name' => 'Risotto aux champignons', 'price' => 18.0, 'category' => 'Plats', 'owner' => $chef1],
+        //     ['name' => 'Coq au vin', 'price' => 26.0, 'category' => 'Plats', 'owner' => $chef2],
+
+        //     // Desserts
+        //     ['name' => 'Tiramisu', 'price' => 8.0, 'category' => 'Desserts', 'owner' => $chef1],
+        //     ['name' => 'Tarte tatin', 'price' => 7.0, 'category' => 'Desserts', 'owner' => $chef2],
+        //     ['name' => 'Crème brûlée', 'price' => 9.0, 'category' => 'Desserts', 'owner' => $chef1],
+        //     ['name' => 'Mousse au chocolat', 'price' => 6.0, 'category' => 'Desserts', 'owner' => $chef2],
+        // ];
+
         // for ($i = 0; $i < 3; $i++) {
         //     $name = 'r' . $i;
         //     $user = new User();
@@ -50,36 +71,17 @@ public function load(ObjectManager $manager): void
         //     $user->setLastname($name);
         //     $user1->setCreatedAt(new \DateTimeImmutable("now"));
 
-        //     for ($i = 0; $i < 4; $i++) {
+        //     foreach ($dishes as $d) {
         //         $dish = new Dish();
-        //         $dish->setOwner($user);
-        //         $dish->setName('name' . $i)
-        //             ->setPrice('price')
-        //             ->setCategory('Entrées' . $i)
-        //             ->setCreated(new \DateTimeImmutable("now"))
-        //             ->setUpdatedAt(new \DateTimeImmutable("now"));
+        //         $dish->setName($d['name'])
+        //             ->setPrice($d['price'])
+        //             ->setCategory($d['category'])
+        //             ->setOwner($d['owner'])
+        //             ->setCreated(new \DateTimeImmutable())
+        //             ->setUpdatedAt(new \DateTimeImmutable());
         //         $manager->persist($dish);
-        //     }
-        //     for ($i = 5; $i < 8; $i++) {
-        //         $dish = new Dish();
-        //         $dish->setOwner($user);
-        //         $dish->setName('name' . $i)
-        //             ->setPrice('price')
-        //             ->setCategory('Plats' . $i)
-        //             ->setCreated(new \DateTimeImmutable("now"))
-        //             ->setUpdatedAt(new \DateTimeImmutable("now"));
-        //         $manager->persist($dish);
-        //     }
-        //     for ($i = 5; $i < 7; $i++) {
-        //         $dish = new Dish();
-        //         $dish->setOwner($user);
-        //         $dish->setName('name' . $i)
-        //             ->setPrice('price')
-        //             ->setCategory('Desserts' . $i)
-        //             ->setCreated(new \DateTimeImmutable("now"))
-        //             ->setUpdatedAt(new \DateTimeImmutable("now"));
-        //         $manager->persist($dish);
-        //     }
+        //     }   
+
         //     $manager->persist($user);
         // }
 
